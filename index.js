@@ -8,15 +8,16 @@ function handleSubmit(ev){
 
   const colorName = f.colorName.value
   document.querySelector('h1').textContent = "Hi " + name + "!" + " Your favorite color is " + colorName + "."
-  document.querySelector('p.empty-paragraph').textContent = "Now click your mouse!"
+  document.querySelector('p.empty-paragraph').textContent = "The color of this sentence is now " + colorName + ". Now click your mouse over this sentence and the color will change again." 
+  document.querySelector('p.empty-paragraph').style.color = colorName
 }
 
-personForm.addEventListener('submit', handleSubmit)
+//Change color of the empty paragraph when the mouse is clicked over the empty paragraph.
+  document.querySelector('.empty-paragraph').onclick = changeColor;
 
-const colorChange = document.querySelector('.empty-paragraph')
+  function changeColor() {
+      document.querySelector('p.empty-paragraph').style.color = "purple";
+      return false;
+  }
 
-function changeColor(){
-  document.body.style.backgroundColor = '#FFC926'
-}
-
-colorChange.addEventListener('click', changeColor, false)
+  personForm.addEventListener('submit', handleSubmit)
