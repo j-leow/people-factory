@@ -29,6 +29,18 @@ function changeFont() {
 //FOR DAY 2
   const personForm = document.querySelector('#personForm')
 
+  function renderColor(color){
+    const colorDiv = document.createElement('div')
+    colorDiv.style.backgroundColor = color
+    colorDiv.style.width = '100px'
+    colorDiv.style.height = '50px'
+
+    return colorDiv   //This replaces the longer version below
+    // return `
+    //   <div style="background-color: ${color}; width: 100px; height: 50px;"></div>
+    //   `
+  }
+
   function handleSubmit(ev){
     ev.preventDefault()
     const f = ev.target
@@ -47,26 +59,27 @@ function changeFont() {
     // em.textContent = name
     // details.appendChild(em) // Append to the parent which is 'details'
 
-    // details.innerHTML = `
-    // <ul>
-    //   <li>Name: ${name}</li>
-    //   <li>Favorite Color: ${colorDiv}</li>
-    //   <li>Age: ${age}</li>
-    // </ul>
-    // `
+    details.innerHTML = `
+    <ul>
+      <li>Name: ${name}</li>
+      <li>Favorite Color: ${renderColor(favoriteColor).outerHTML}</li>
+      <li>Age: ${age}</li>
+    </ul> `
 
-    //LAB DAY 2
-    //const li = document.createElement('li')
-    const liName = document.createElement('li')
-    const liAge = document.createElement('li')
-    const liColor = document.createElement('li')
-    //li.textContent = name
-    liName.textContent = name
-    liAge.textContent = age
-    liColor.textContent = colorDiv
-    details.appendChild(liName)
-    details.appendChild(liAge)
-    details.appendChild(liColor)
+    // LAB DAY 2
+    // const li = document.createElement('li')
+    // const liName = document.createElement('li')
+    // const liAge = document.createElement('li')
+    // const liColor = document.createElement('li')
+    // //li.textContent = name
+    // liName.textContent = name
+    // liAge.textContent = age
+    // liColor.textContent = colorDiv
+    // details.appendChild(liName)
+    // details.appendChild(liAge)
+    // details.appendChild(liColor)
+
+
   }
 
 
