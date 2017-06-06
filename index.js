@@ -33,14 +33,24 @@ function changeFont() {
     ev.preventDefault()
     const f = ev.target
     const name = f.personName.value
-    const details = document.querySelector('#details')
+    const favoriteColor = f.favoriteColor.value
+    const age = f.age.value
+    // const details = document.querySelector('#details')
 
     // details.innerHTML = `<em>${name}</em>`  //The back ticks make templates. Dollar sign curly brace means you want to put an expression in it. Makes it easier because no need for concatenation.
 
     //Create a DOM node
-    const em = document.createElement('em')
-    em.textContent = name
-    details.appendChild(em) // Append to the parent which is 'details'
+    // const em = document.createElement('em')
+    // em.textContent = name
+    // details.appendChild(em) // Append to the parent which is 'details'
+
+    details.innerHTML = `
+    <ul>
+      <li>Name: ${name}</li>
+      <li>Favorite Color: ${favoriteColor}</li>
+      <li>Age: ${age}</li>
+    </ul>
+    `
   }
 
 
