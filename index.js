@@ -1,4 +1,4 @@
-const personForm = document.querySelector('#personForm')
+/*const personForm = document.querySelector('#personForm')
 
 function handleSubmit(ev){
   ev.preventDefault()
@@ -23,4 +23,19 @@ function changeFont() {
 
   personForm.addEventListener('submit', handleSubmit)
   personForm.addEventListener('click', changeColor)
-  personForm.addEventListener('click', changeFont)
+  personForm.addEventListener('click', changeFont) */
+
+
+//FOR DAY 2 
+  const personForm = document.querySelector('#personForm')
+
+  function handleSubmit(ev){
+    ev.preventDefault()
+    const f = ev.target
+    const details = document.querySelector('#details')
+
+    details.innerHTML = '<em>' + name + '</em>'
+  }
+
+
+    personForm.addEventListener('submit', handleSubmit)
