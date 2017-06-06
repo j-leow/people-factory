@@ -35,7 +35,12 @@ function changeFont() {
     const name = f.personName.value
     const details = document.querySelector('#details')
 
-    details.innerHTML = `<em>${name}</em>`  //The back ticks make templates. Dollar sign curly brace means you want to put an expression in it. Makes it easier because no need for concatenation.
+    // details.innerHTML = `<em>${name}</em>`  //The back ticks make templates. Dollar sign curly brace means you want to put an expression in it. Makes it easier because no need for concatenation.
+
+    //Create a DOM node
+    const em = document.createElement('em')
+    em.textContent = name
+    details.appendChild(em) // Append to the parent which is 'details'
   }
 
 
