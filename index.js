@@ -26,16 +26,17 @@ function changeFont() {
   personForm.addEventListener('click', changeFont) */
 
 
-//FOR DAY 2 
+//FOR DAY 2
   const personForm = document.querySelector('#personForm')
 
   function handleSubmit(ev){
     ev.preventDefault()
     const f = ev.target
+    const name = f.personName.value
     const details = document.querySelector('#details')
 
-    details.innerHTML = '<em>' + name + '</em>'
+    details.innerHTML = `<em>${name}</em>`  //The back ticks make templates. Dollar sign curly brace means you want to put an expression in it. Makes it easier because no need for concatenation.
   }
 
 
-    personForm.addEventListener('submit', handleSubmit)
+  personForm.addEventListener('submit', handleSubmit)
