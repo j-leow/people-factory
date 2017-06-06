@@ -30,6 +30,10 @@ function changeFont() {
   const personForm = document.querySelector('#personForm')
 
   function renderColor(color) {
+    console.group('renderColor')
+    console.log(`This: ${this}`)
+    console.groupEnd('renderColor')
+
     const colorDiv = document.createElement('div')
     colorDiv.style.backgroundColor = color
     colorDiv.style.width = '100px'
@@ -103,6 +107,5 @@ function changeFont() {
 
 
   }
-
 
   personForm.addEventListener('submit', handleSubmit)
