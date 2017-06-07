@@ -7,6 +7,19 @@ section > div {  /* > means child, i.e. direct descendant If you don't put > the
   margin: 1rem auto;
 }
 
+h1 {
+  font: 800 64px/64px 'Open Sans', san-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 span {
+  font: 400 60px/60px, cursive;
+  text-transform: none;
+  text-align: center;
+  font-style: italic;
+}
+
 form {
   margin-top: 50px;
 }
